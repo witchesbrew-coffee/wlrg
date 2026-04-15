@@ -1,0 +1,509 @@
+---
+const siteUrl = 'https://westlittlerockglass.com';
+const title = 'West Little Rock Glass — Frameless Showers, Mirrors & 24-Hour Glass Repair | Little Rock, AR';
+const description = 'Custom glass installation and 24-hour emergency repair in Little Rock, AR. 20+ years of frameless showers, mirrors, handrails, storefronts, and glass antiquing. Free estimates.';
+const phone = '501-223-3034';
+const phoneTel = '+15012233034';
+const email = 'westlrglass@sbcglobal.net';
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': siteUrl,
+  name: 'West Little Rock Glass',
+  image: `${siteUrl}/hero-handrails.jpeg`,
+  description,
+  telephone: phone,
+  email,
+  url: siteUrl,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1903 Hinson Loop Road',
+    addressLocality: 'Little Rock',
+    addressRegion: 'AR',
+    postalCode: '72212',
+    addressCountry: 'US',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '17:00',
+    },
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Little Rock' },
+    { '@type': 'AdministrativeArea', name: 'Arkansas' },
+  ],
+  priceRange: '$$',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Glass Services',
+    itemListElement: [
+      { '@type': 'Service', name: 'Frameless Shower Doors and Enclosures' },
+      { '@type': 'Service', name: 'Custom Mirrors' },
+      { '@type': 'Service', name: 'Glass Antiquing' },
+      { '@type': 'Service', name: 'Handrails and Glass Railings' },
+      { '@type': 'Service', name: 'Commercial Storefronts' },
+      { '@type': 'Service', name: 'Custom Glass and Tabletops' },
+      { '@type': 'Service', name: '24-Hour Emergency Glass Repair' },
+    ],
+  },
+};
+
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  itemReviewed: {
+    '@type': 'LocalBusiness',
+    name: 'West Little Rock Glass',
+  },
+  reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+  author: { '@type': 'Person', name: 'Jennifer Luttrell' },
+  reviewBody:
+    'A frameless glass shower door, master sink vanity mirror and a wardrobe mirror for us. I felt they were quick, affordable and professional. The guys came to install today, and they were polite informative and they made sure everything was clean before leaving. Gavin was quick and decisive when it came to asking what he suggested for style and details. I like that he had an input. You could tell he\u2019s had several years\u2019 experience. Overall we had a great experience, and I plan to use them for future jobs.',
+};
+
+const services = [
+  { slug: 'frameless-showers', img: '/service-frameless-showers.jpeg', title: 'Frameless Showers', copy: 'Heavy-glass shower doors, walls, and enclosures. Custom-fit to any bathroom — no visible hardware between you and the view.' },
+  { slug: 'custom-mirrors', img: '/service-mirror-install.jpeg', title: 'Custom Mirrors', copy: 'Bathroom vanity mirrors, wardrobe walls, gym walls, and custom cuts. Measured, cut, and installed to the quarter-inch.' },
+  { slug: 'glass-antiquing', img: '/service-antiquing.jpeg', title: 'Glass Antiquing', copy: 'Mirror walls with character — aged, distressed, and patina finishes that look decades old. A premium signature service.' },
+  { slug: 'handrails', img: '/hero-handrails.jpeg', title: 'Handrails & Railings', copy: 'Interior staircases, deck edges, lake-house lookouts. Tempered glass panels on steel or wood, code-compliant and clean.' },
+  { slug: 'storefronts', img: '/service-storefronts.jpeg', title: 'Commercial Storefronts', copy: 'Office fronts, retail entries, and double-pane window systems. Tempered, ADA-compliant, and built to code.' },
+  { slug: 'custom-glass', img: '/service-commercial.jpeg', title: 'Custom Glass & Tabletops', copy: 'One-off panels, tabletops, shelves, and backsplashes. If you can draw it, we can cut it — up to 1" thick.' },
+  { slug: 'emergency-repair', img: '/service-install-crew.jpeg', title: '24-Hour Emergency Repair', copy: 'Broken storefront? Shattered shower? Call day or night — we board up same-day and replace same-week.' },
+  { slug: 'free-quote', img: '/service-antiquing-room.jpeg', title: 'Free In-Home Estimates', copy: 'We come out, measure, and give you a real number — not a range. No pressure, no subcontractors, no surprises.' },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={siteUrl} />
+<meta property="og:image" content={`${siteUrl}/hero-handrails.jpeg`} />
+<meta property="og:site_name" content="West Little Rock Glass" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={`${siteUrl}/hero-handrails.jpeg`} />
+<link rel="canonical" href={siteUrl} />
+<link rel="icon" type="image/jpeg" href="/hero-handrails.jpeg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(reviewSchema)}></script>
+
+<style>
+:root{
+  --navy:#12304F;
+  --navy-dk:#0A1E33;
+  --glass:#4A90B8;
+  --sky:#A8C8DF;
+  --sky-lt:#DCE9F3;
+  --pearl:#F5F7FA;
+  --white:#FFFFFF;
+  --ink:#1A2332;
+  --steel:#5F6B7A;
+  --steel-lt:#9AA5B4;
+  --amber:#D4922B;
+  --amber-dk:#B8791A;
+  --border:rgba(18,48,79,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.heading{font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:-0.015em;line-height:1.2}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--glass);margin-bottom:0.75rem;display:inline-block}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;font-family:'Inter',sans-serif;font-weight:600;font-size:0.95rem;border-radius:4px;transition:all 0.2s;border:none;cursor:pointer;white-space:nowrap}
+.btn-primary{background:var(--navy);color:var(--white)}
+.btn-primary:hover{background:var(--navy-dk);transform:translateY(-1px)}
+.btn-amber{background:var(--amber);color:var(--white)}
+.btn-amber:hover{background:var(--amber-dk);transform:translateY(-1px)}
+.btn-ghost{background:var(--white);color:var(--navy);border:1.5px solid var(--navy)}
+.btn-ghost:hover{background:var(--navy);color:var(--white)}
+.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid var(--white)}
+.btn-outline-white:hover{background:var(--white);color:var(--navy)}
+
+/* TOP BAR */
+.topbar{background:var(--navy-dk);color:var(--sky);font-size:0.85rem;padding:8px 0}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.topbar a{color:var(--white);font-weight:600;transition:color 0.2s}
+.topbar a:hover{color:var(--sky)}
+.topbar-items{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.topbar-item{display:inline-flex;align-items:center;gap:6px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 1px 3px rgba(18,48,79,0.04)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1200px;margin:0 auto;gap:24px}
+.nav-logo{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy);letter-spacing:-0.02em;line-height:1.1}
+.nav-logo span{display:block;font-size:0.7rem;font-weight:500;color:var(--steel);letter-spacing:0.12em;text-transform:uppercase;margin-top:2px;line-height:1}
+.nav-menu{display:flex;gap:28px;align-items:center}
+.nav-menu a:not(.btn){font-size:0.93rem;font-weight:500;color:var(--ink);transition:color 0.2s}
+.nav-menu a:not(.btn):hover{color:var(--glass)}
+.nav-menu .btn{padding:10px 20px;font-size:0.88rem}
+
+/* HERO */
+.hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;background:var(--navy-dk)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,30,51,0.82) 0%,rgba(18,48,79,0.55) 60%,rgba(74,144,184,0.25) 100%)}
+.hero-inner{position:relative;z-index:1;padding:80px 0;width:100%}
+.hero h1{font-family:'Manrope',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.1;color:var(--white);letter-spacing:-0.02em;margin-bottom:1.5rem;max-width:780px}
+.hero h1 span{color:var(--sky)}
+.hero-sub{font-size:1.15rem;line-height:1.6;color:rgba(255,255,255,0.9);margin-bottom:2rem;max-width:620px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-eyebrow{font-size:13px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--sky);margin-bottom:1rem;display:inline-block}
+
+/* TRUST BAR */
+.trust{background:var(--pearl);padding:36px 0;border-bottom:1px solid var(--border)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.trust-item{text-align:center;padding:8px}
+.trust-stat{font-family:'Manrope',sans-serif;font-size:1.75rem;font-weight:800;color:var(--navy);line-height:1;margin-bottom:6px;letter-spacing:-0.02em}
+.trust-label{font-size:0.82rem;color:var(--steel);font-weight:500;line-height:1.4}
+
+/* SECTION COMMON */
+section{padding:90px 0}
+.section-header{text-align:center;max-width:720px;margin:0 auto 3.5rem}
+.section-header h2{font-size:clamp(1.7rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:1rem}
+.section-header p{font-size:1.08rem;color:var(--steel);line-height:1.65}
+
+/* SERVICES */
+.services{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;cursor:default}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,48,79,0.08)}
+.service-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.service-body{padding:20px}
+.service-body h3{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px;letter-spacing:-0.01em}
+.service-body p{font-size:0.9rem;color:var(--steel);line-height:1.55}
+
+/* GALLERY */
+.gallery{background:var(--pearl)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(18,48,79,0.06)}
+
+/* TESTIMONIAL */
+.testimonial{background:var(--navy)}
+.testimonial-inner{max-width:780px;margin:0 auto;text-align:center;color:var(--white)}
+.testimonial-mark{font-family:'Manrope',serif;font-size:4rem;color:var(--sky);line-height:0.5;opacity:0.6;margin-bottom:1rem;display:block}
+.testimonial-quote{font-size:clamp(1.15rem,2vw,1.4rem);font-style:italic;line-height:1.6;color:var(--white);margin-bottom:2rem}
+.testimonial-quote strong{font-style:normal;font-weight:600;color:var(--sky)}
+.testimonial-author{font-weight:600;color:var(--sky);letter-spacing:0.05em;text-transform:uppercase;font-size:0.88rem}
+.testimonial-author span{display:block;font-weight:400;color:rgba(168,200,223,0.6);text-transform:none;letter-spacing:0;font-size:0.82rem;margin-top:4px}
+
+/* ABOUT */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.about h2{font-size:clamp(1.7rem,3.3vw,2.3rem);margin-bottom:1.25rem;color:var(--ink)}
+.about p{font-size:1.03rem;line-height:1.75;color:var(--steel);margin-bottom:1.15rem}
+.about p strong{color:var(--ink);font-weight:600}
+.about-img{width:100%;height:auto;border-radius:8px;box-shadow:0 12px 40px rgba(18,48,79,0.15)}
+
+/* CONTACT */
+.contact{background:var(--pearl)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:start}
+.contact-info h3{font-family:'Manrope',sans-serif;font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:8px;letter-spacing:-0.01em}
+.contact-block{background:var(--white);padding:28px;border:1px solid var(--border);border-radius:8px;margin-bottom:16px}
+.contact-block a{color:var(--glass);font-weight:600;transition:color 0.2s}
+.contact-block a:hover{color:var(--navy)}
+.contact-phone{font-family:'Manrope',sans-serif;font-size:2rem;font-weight:800;color:var(--navy);letter-spacing:-0.02em;display:block;margin:4px 0 10px;line-height:1}
+.contact-phone:hover{color:var(--glass)}
+.contact-small{font-size:0.88rem;color:var(--steel);line-height:1.6}
+.contact-emergency{background:var(--amber);color:var(--white);padding:16px 20px;border-radius:6px;margin-top:10px;font-weight:600;display:flex;align-items:center;gap:10px;font-size:0.93rem}
+.contact-emergency strong{font-weight:800}
+
+/* FORM */
+.quote-form{background:var(--white);padding:32px;border:1px solid var(--border);border-radius:8px}
+.quote-form h3{font-family:'Manrope',sans-serif;font-size:1.35rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem}
+.quote-form > p{color:var(--steel);margin-bottom:1.5rem;font-size:0.95rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-field{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+.form-field label{font-size:0.82rem;color:var(--ink);font-weight:600}
+.form-field input,.form-field textarea,.form-field select{background:var(--white);border:1.5px solid var(--border);border-radius:4px;padding:11px 13px;color:var(--ink);font-family:'Inter',sans-serif;font-size:0.95rem;transition:border-color 0.2s}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{outline:none;border-color:var(--glass)}
+.form-field textarea{resize:vertical;min-height:90px}
+.honeypot{display:none}
+
+/* FOOTER */
+.footer{background:var(--navy-dk);color:var(--sky);padding:48px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-brand{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.15rem;color:var(--white);margin-bottom:12px;letter-spacing:-0.01em}
+.footer-brand + p{font-size:0.9rem;line-height:1.6;color:rgba(168,200,223,0.8);max-width:360px}
+.footer-col h4{font-family:'Manrope',sans-serif;font-size:0.88rem;font-weight:700;color:var(--white);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.1em}
+.footer-col a,.footer-col p{display:block;color:rgba(168,200,223,0.8);font-size:0.9rem;padding:4px 0;transition:color 0.2s;line-height:1.5}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid rgba(168,200,223,0.15);padding-top:20px;display:flex;justify-content:space-between;font-size:0.82rem;color:rgba(168,200,223,0.6);flex-wrap:wrap;gap:10px}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr;gap:24px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-menu a:not(.btn){display:none}
+  .hero{min-height:520px}
+  section{padding:60px 0}
+  .topbar-items{justify-content:center}
+}
+@media(max-width:600px){
+  .services-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-items">
+      <span class="topbar-item">&#128205; 1903 Hinson Loop Rd, Little Rock, AR</span>
+      <span class="topbar-item">&#128337; Mon&ndash;Fri 8am&ndash;5pm &middot; 24/7 Emergency</span>
+    </div>
+    <div class="topbar-items">
+      <a href={`tel:${phoneTel}`} class="topbar-item">&#9742; {phone}</a>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">
+      West Little Rock Glass
+      <span>Custom glass &middot; since 2005</span>
+    </a>
+    <div class="nav-menu">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#quote" class="btn btn-primary">Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="/hero-handrails.jpeg" alt="Multi-level glass handrails installation on a Little Rock lake house by West Little Rock Glass" /></div>
+  <div class="hero-inner">
+    <div class="container">
+      <span class="hero-eyebrow">20+ Years in Little Rock &middot; Locally Owned</span>
+      <h1>Custom glass. <span>24-hour repair.</span><br />Installed right, the first time.</h1>
+      <p class="hero-sub">Frameless showers, mirrors, handrails, storefronts, and emergency repair across the Little Rock metro. One local crew &mdash; from first quote to final clean-up.</p>
+      <div class="hero-ctas">
+        <a href={`tel:${phoneTel}`} class="btn btn-amber">&#9742; Call {phone}</a>
+        <a href="#quote" class="btn btn-outline-white">Get a free quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-stat">20+</div>
+        <div class="trust-label">Years in business</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-stat">24/7</div>
+        <div class="trust-label">Emergency glass repair</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-stat">Free</div>
+        <div class="trust-label">In-home estimates</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-stat">Local</div>
+        <div class="trust-label">Little Rock owned &amp; operated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What we install</span>
+      <h2 class="heading">Every kind of glass, all from one crew.</h2>
+      <p>No subcontractors, no sales reps. The people who quote your project are the people who install it.</p>
+    </div>
+    <div class="services-grid">
+      {services.map((s) => (
+        <article class="service-card">
+          <img src={s.img} alt={`${s.title} by West Little Rock Glass`} class="service-img" loading="lazy" />
+          <div class="service-body">
+            <h3>{s.title}</h3>
+            <p>{s.copy}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Recent work</span>
+      <h2 class="heading">Twenty years of Little Rock installs.</h2>
+      <p>A sample of projects across residential, commercial, and hospitality.</p>
+    </div>
+    <div class="gallery-grid">
+      <img src="/hero-handrails.jpeg" alt="Lake-house glass railings" class="gallery-img" loading="lazy" />
+      <img src="/service-frameless-showers.jpeg" alt="Frameless shower enclosure" class="gallery-img" loading="lazy" />
+      <img src="/service-antiquing-room.jpeg" alt="Antique mirror dining room" class="gallery-img" loading="lazy" />
+      <img src="/service-storefronts.jpeg" alt="Commercial glass storefront" class="gallery-img" loading="lazy" />
+      <img src="/service-commercial.jpeg" alt="Large-scale commercial glass installation" class="gallery-img" loading="lazy" />
+      <img src="/service-mirror-install.jpeg" alt="Custom mirror installation in progress" class="gallery-img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="container testimonial-inner">
+    <span class="testimonial-mark">&ldquo;</span>
+    <p class="testimonial-quote">A frameless glass shower door, master sink vanity mirror and a wardrobe mirror for us. I felt they were <strong>quick, affordable, and professional</strong>. The guys came to install today, and they were polite, informative, and they made sure everything was clean before leaving. Gavin was <strong>quick and decisive</strong> when it came to asking what he suggested for style and details. You could tell he&rsquo;s had several years&rsquo; experience. Overall we had a <strong>great experience</strong>, and I plan to use them for future jobs.</p>
+    <div class="testimonial-author">Jennifer Luttrell<span>Little Rock, AR</span></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">About WLRG</span>
+        <h2 class="heading">Same faces, same phone number, same truck for two decades.</h2>
+        <p>West Little Rock Glass has been cutting, shaping, and installing glass in Little Rock for more than twenty years. We&rsquo;re a small local crew &mdash; no subcontractors, no high-pressure sales reps, no out-of-state call center.</p>
+        <p><strong>Every project is quoted, installed, and backed by the same people.</strong> Gavin and the rest of the team have spent years in the trade, and it shows: the details matter, the clean-up is part of the job, and the phone still rings at 501-223-3034 long after the install is done.</p>
+        <p>Whether it&rsquo;s a master-bath frameless shower, a lake-house handrail run, an antique mirror backsplash, or a 24-hour emergency call, we do the work ourselves. That&rsquo;s the entire business model.</p>
+        <div class="hero-ctas" style="margin-top:1.5rem">
+          <a href={`tel:${phoneTel}`} class="btn btn-primary">&#9742; Call {phone}</a>
+          <a href="#quote" class="btn btn-ghost">Request a quote</a>
+        </div>
+      </div>
+      <div>
+        <img src="/service-install-crew.jpeg" alt="West Little Rock Glass crew installing commercial storefront glass" class="about-img" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Get in touch</span>
+      <h2 class="heading">Free quote, fast response.</h2>
+      <p>Tell us what you need. We&rsquo;ll call back with a real number, not a range.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-block">
+          <h3>Call or email</h3>
+          <a href={`tel:${phoneTel}`} class="contact-phone">{phone}</a>
+          <a href={`mailto:${email}`}>{email}</a>
+        </div>
+        <div class="contact-block">
+          <h3>Shop location</h3>
+          <p class="contact-small">1903 Hinson Loop Road<br />Little Rock, AR 72212</p>
+        </div>
+        <div class="contact-block">
+          <h3>Hours</h3>
+          <p class="contact-small">Monday&ndash;Friday &middot; 8am&ndash;5pm</p>
+          <div class="contact-emergency">
+            <span>&#9888;</span>
+            <div><strong>24/7 Emergency Repair</strong><br />Call anytime &mdash; we board up same-day.</div>
+          </div>
+        </div>
+      </div>
+      <form id="quote" class="quote-form" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <h3>Request a free quote</h3>
+        <p>Tell us about your project. We respond within one business day.</p>
+        <input type="hidden" name="form-name" value="quote" />
+        <p class="honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-field">
+          <label for="service">What do you need?</label>
+          <select id="service" name="service">
+            <option value="">Choose one…</option>
+            <option value="Frameless shower">Frameless shower door or enclosure</option>
+            <option value="Custom mirror">Custom mirror</option>
+            <option value="Glass antiquing">Glass antiquing</option>
+            <option value="Handrails">Glass handrails / railings</option>
+            <option value="Storefront">Commercial storefront</option>
+            <option value="Custom glass">Custom glass or tabletop</option>
+            <option value="Emergency repair">24-hour emergency repair</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Project details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Rough dimensions, location, timing — whatever you've got."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send request &rarr;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">West Little Rock Glass</div>
+        <p>Custom glass installation and 24-hour emergency repair. Little Rock, Arkansas since 2005. No subcontractors — the crew that quotes it installs it.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Frameless showers</a>
+        <a href="#services">Custom mirrors</a>
+        <a href="#services">Glass antiquing</a>
+        <a href="#services">Handrails</a>
+        <a href="#services">Storefronts</a>
+        <a href="#services">24-hour repair</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href={`tel:${phoneTel}`}>{phone}</a>
+        <a href={`mailto:${email}`}>{email}</a>
+        <p>1903 Hinson Loop Road<br />Little Rock, AR 72212</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 West Little Rock Glass. All rights reserved.</div>
+      <div>Built with craft by <a href="https://bitbrd.com" target="_blank" rel="noopener" style="color:var(--sky);font-weight:600">BitBrd</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
