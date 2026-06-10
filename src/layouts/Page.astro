@@ -1,0 +1,207 @@
+---
+// Shared shell for WLRG subpages (the homepage keeps its own single-file build).
+// Same design language: navy/glass/sky/amber, Manrope + Inter.
+interface Props {
+  title: string;
+  description: string;
+  path: string;            // e.g. '/glass-repair-little-rock'
+  ldBlocks?: string[];     // pre-stringified JSON-LD
+}
+const { title, description, path, ldBlocks = [] } = Astro.props;
+
+const siteUrl = 'https://westlittlerockglass.com';
+const canonical = `${siteUrl}${path}`;
+const phone = '501-223-3034';
+const phoneTel = '+15012233034';
+const email = 'westlrglass@sbcglobal.net';
+
+const services = [
+  { label: '24-Hour Glass Repair', href: '/glass-repair-little-rock' },
+  { label: 'Frameless Shower Doors', href: '/frameless-shower-doors-little-rock' },
+  { label: 'Custom Mirrors', href: '/custom-mirrors-little-rock' },
+  { label: 'Glass Handrails & Railings', href: '/glass-handrails-little-rock' },
+  { label: 'Commercial Storefront Glass', href: '/storefront-glass-little-rock' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content="West Little Rock Glass" />
+<meta property="og:image" content={`${siteUrl}/hero-handrails.jpeg`} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="geo.region" content="US-AR" />
+<meta name="geo.placename" content="Little Rock" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+{ldBlocks.map((ld) => <script type="application/ld+json" set:html={ld} />)}
+<style is:global>
+:root{
+  --navy:#12304F; --navy-dk:#0A1E33; --glass:#4A90B8; --sky:#A8C8DF; --sky-lt:#DCE9F3;
+  --pearl:#F5F7FA; --white:#FFFFFF; --ink:#1A2332; --steel:#5F6B7A; --steel-lt:#9AA5B4;
+  --amber:#D4922B; --amber-dk:#B8791A; --border:rgba(18,48,79,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-0.015em;line-height:1.2;color:var(--navy)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;font-family:'Manrope',sans-serif;font-weight:700;font-size:0.95rem;border-radius:6px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary{background:var(--amber);color:var(--navy-dk)}
+.btn-primary:hover{background:var(--amber-dk);transform:translateY(-1px)}
+.btn-ghost{border:1.5px solid var(--glass);color:var(--navy)}
+.btn-ghost:hover{background:var(--sky-lt)}
+.btn-light{background:var(--white);color:var(--navy)}
+.btn-light:hover{background:var(--sky-lt)}
+
+/* topbar + nav (mirrors homepage) */
+.topbar{background:var(--navy-dk);color:var(--sky);font-size:0.85rem;padding:8px 0}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.topbar a{color:var(--white);font-weight:600}
+.topbar a:hover{color:var(--sky)}
+.topbar-items{display:flex;gap:18px;flex-wrap:wrap}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto;gap:24px}
+.nav-logo{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.15rem;color:var(--navy);letter-spacing:-0.02em;line-height:1.1}
+.nav-logo span{display:block;font-size:0.68rem;font-weight:500;color:var(--steel);letter-spacing:0.12em;text-transform:uppercase;margin-top:2px}
+.nav-menu{display:flex;gap:24px;align-items:center}
+.nav-menu a:not(.btn){font-size:0.92rem;font-weight:500;color:var(--ink)}
+.nav-menu a:not(.btn):hover{color:var(--glass)}
+.nav-menu .btn{padding:9px 18px;font-size:0.86rem}
+
+/* landing scaffolding */
+.lp-hero{background:linear-gradient(135deg,var(--navy-dk),var(--navy));color:var(--white);padding:72px 0 64px}
+.lp-hero .eyebrow{color:var(--amber);font-family:'Manrope',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.16em;text-transform:uppercase}
+.lp-hero h1{color:var(--white);font-size:clamp(1.9rem,1.3rem+2.6vw,3rem);margin-top:12px;max-width:21ch}
+.lp-hero p.lede{color:var(--sky);font-size:1.12rem;max-width:58ch;margin-top:16px;line-height:1.7}
+.lp-hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.lp-section{padding:64px 0}
+.lp-section.alt{background:var(--pearl)}
+.lp-section h2{font-size:clamp(1.4rem,1.1rem+1.4vw,2rem);margin-bottom:16px}
+.lp-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;align-items:center}
+.lp-body{color:var(--steel);max-width:62ch}
+.lp-body p{margin-bottom:12px}
+.lp-body ul{list-style:none;display:grid;gap:10px;margin:14px 0}
+.lp-body li{padding-left:26px;position:relative}
+.lp-body li::before{content:'✓';position:absolute;left:0;color:var(--glass);font-weight:700}
+.lp-body a{color:var(--glass);font-weight:600}
+.lp-body b{color:var(--ink)}
+.lp-photo{border-radius:10px;overflow:hidden;box-shadow:0 18px 44px rgba(18,48,79,0.18)}
+.lp-photo img{width:100%;height:100%;object-fit:cover}
+.lp-faq details{background:var(--white);border:1px solid var(--border);border-radius:8px;margin-bottom:10px}
+.lp-faq summary{cursor:pointer;padding:16px 20px;font-family:'Manrope',sans-serif;font-weight:700;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px}
+.lp-faq summary::after{content:'+';color:var(--amber);font-size:1.2rem}
+.lp-faq details[open] summary::after{content:'–'}
+.lp-faq p{padding:0 20px 16px;color:var(--steel)}
+.lp-cta{background:var(--navy);color:var(--white);padding:56px 0}
+.lp-cta h2{color:var(--white)}
+.lp-cta p{color:var(--sky);max-width:56ch;margin-top:10px}
+.lp-cta .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.lp-related{padding:28px 0 8px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;font-size:0.9rem}
+.lp-related span{color:var(--steel);font-weight:600}
+.lp-related a{color:var(--glass);font-weight:600;text-decoration:underline}
+
+/* quote form */
+.quote-form{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:28px;box-shadow:0 14px 38px rgba(18,48,79,0.1)}
+.quote-form h3{margin-bottom:6px}
+.quote-form>p{color:var(--steel);font-size:0.92rem;margin-bottom:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.quote-form label{display:block;font-size:0.8rem;font-weight:600;color:var(--steel)}
+.quote-form input,.quote-form select,.quote-form textarea{width:100%;margin-top:5px;padding:11px 12px;font:inherit;font-size:0.95rem;border:1px solid var(--border);border-radius:6px;background:var(--white);color:var(--ink)}
+.quote-form input:focus,.quote-form textarea:focus,.quote-form select:focus{outline:2px solid var(--glass)}
+.honeypot{position:absolute;left:-9999px}
+.quote-form .btn{width:100%;justify-content:center;margin-top:6px}
+
+/* footer */
+.footer{background:var(--navy-dk);color:var(--sky);padding:48px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-brand{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.15rem;color:var(--white);margin-bottom:12px}
+.footer-brand+p{font-size:0.9rem;color:rgba(168,200,223,0.8);max-width:360px}
+.footer-col h4{font-family:'Manrope',sans-serif;font-size:0.88rem;font-weight:700;color:var(--white);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.1em}
+.footer-col a,.footer-col p{display:block;color:rgba(168,200,223,0.8);font-size:0.9rem;padding:4px 0}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid rgba(168,200,223,0.15);padding-top:20px;display:flex;justify-content:space-between;font-size:0.82rem;color:rgba(168,200,223,0.6);flex-wrap:wrap;gap:10px}
+
+@media(max-width:900px){
+  .lp-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-menu a:not(.btn){display:none}
+}
+@media(max-width:600px){
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-items">
+      <span>&#128205; 1903 Hinson Loop Rd, Little Rock, AR</span>
+      <span>&#128337; Mon&ndash;Fri 8am&ndash;5pm &middot; 24/7 Emergency</span>
+    </div>
+    <div class="topbar-items">
+      <a href={`tel:${phoneTel}`}>&#9742; {phone}</a>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      West Little Rock Glass
+      <span>Custom glass &middot; since 2005</span>
+    </a>
+    <div class="nav-menu">
+      <a href="/#services">Services</a>
+      <a href="/#gallery">Gallery</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/#quote" class="btn btn-primary">Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<slot />
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">West Little Rock Glass</div>
+        <p>Custom glass, mirrors, frameless showers, handrails, storefronts and 24-hour emergency repair. Serving the Little Rock metro for 20+ years.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        {services.map((s) => <a href={s.href}>{s.label}</a>)}
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href={`tel:${phoneTel}`}>{phone}</a>
+        <a href={`mailto:${email}`}>{email}</a>
+        <p>1903 Hinson Loop Rd<br />Little Rock, AR 72212</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 West Little Rock Glass. All rights reserved.</div>
+      <div>Built with craft by <a href="https://bitbrd.com" target="_blank" rel="noopener" style="color:var(--sky);font-weight:600">BitBrd</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

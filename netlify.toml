@@ -11,3 +11,41 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# ── Old Wix /blank-X URLs -> real pages (301s preserve any link equity) ──
+[[redirects]]
+  from = "/blank"
+  to = "/#about"
+  status = 301
+[[redirects]]
+  from = "/blank-1"
+  to = "/#contact"
+  status = 301
+[[redirects]]
+  from = "/blank-1-1"
+  to = "/#gallery"
+  status = 301
+[[redirects]]
+  from = "/blank-1-1-1"
+  to = "/glass-repair-little-rock"
+  status = 301
+[[redirects]]
+  from = "/blank-2"
+  to = "/#services"
+  status = 301
+[[redirects]]
+  from = "/blank-2-1"
+  to = "/storefront-glass-little-rock"
+  status = 301
+[[redirects]]
+  from = "/blank-2-1-1"
+  to = "/custom-mirrors-little-rock"
+  status = 301
+[[redirects]]
+  from = "/blank-2-1-1-1"
+  to = "/frameless-shower-doors-little-rock"
+  status = 301
+[[redirects]]
+  from = "/blank-2-1-1-1-1"
+  to = "/glass-handrails-little-rock"
+  status = 301
