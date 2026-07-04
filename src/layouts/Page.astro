@@ -1,6 +1,7 @@
 ---
 // Shared shell for WLRG subpages (the homepage keeps its own single-file build).
 // Same design language: navy/glass/sky/amber, Manrope + Inter.
+import Logo from '../components/Logo.astro';
 interface Props {
   title: string;
   description: string;
@@ -32,6 +33,8 @@ const services = [
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonical} />
 <meta property="og:title" content={title} />
@@ -74,8 +77,9 @@ h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-0.015em;line-height:1.
 .topbar-items{display:flex;gap:18px;flex-wrap:wrap}
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto;gap:24px}
-.nav-logo{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.15rem;color:var(--navy);letter-spacing:-0.02em;line-height:1.1}
-.nav-logo span{display:block;font-size:0.68rem;font-weight:500;color:var(--steel);letter-spacing:0.12em;text-transform:uppercase;margin-top:2px}
+.nav-logo{display:flex;align-items:center;line-height:1.1}
+.nav-logo img{height:36px;width:auto;display:block}
+@media(max-width:600px){.nav-logo img{height:30px}}
 .nav-menu{display:flex;gap:24px;align-items:center}
 .nav-menu a:not(.btn){font-size:0.92rem;font-weight:500;color:var(--ink)}
 .nav-menu a:not(.btn):hover{color:var(--glass)}
@@ -126,7 +130,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-0.015em;line-height:1.
 
 /* footer */
 .footer{background:var(--navy-dk);color:var(--sky);padding:48px 0 24px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}
 .footer-brand{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.15rem;color:var(--white);margin-bottom:12px}
 .footer-brand+p{font-size:0.9rem;color:rgba(168,200,223,0.8);max-width:360px}
 .footer-col h4{font-family:'Manrope',sans-serif;font-size:0.88rem;font-weight:700;color:var(--white);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.1em}
@@ -151,7 +155,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-0.015em;line-height:1.
 <div class="topbar">
   <div class="container topbar-inner">
     <div class="topbar-items">
-      <span>&#128205; 1903 Hinson Loop Rd, Little Rock, AR</span>
+      <span>&#128205; 1903 Hinson Loop Rd #3903, Little Rock, AR</span>
       <span>&#128337; Mon&ndash;Fri 8am&ndash;5pm &middot; 24/7 Emergency</span>
     </div>
     <div class="topbar-items">
@@ -162,10 +166,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-0.015em;line-height:1.
 
 <nav class="nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">
-      West Little Rock Glass
-      <span>Custom glass &middot; since 2005</span>
-    </a>
+    <Logo href="/" />
     <div class="nav-menu">
       <a href="/#services">Services</a>
       <a href="/#gallery">Gallery</a>
@@ -190,10 +191,21 @@ h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-0.015em;line-height:1.
         {services.map((s) => <a href={s.href}>{s.label}</a>)}
       </div>
       <div class="footer-col">
+        <h4>Service Area</h4>
+        <a href="/glass-north-little-rock">North Little Rock</a>
+        <a href="/glass-sherwood">Sherwood</a>
+        <a href="/glass-jacksonville">Jacksonville</a>
+        <a href="/glass-maumelle">Maumelle</a>
+        <a href="/glass-cabot">Cabot</a>
+        <a href="/glass-conway">Conway</a>
+        <a href="/glass-benton">Benton</a>
+        <a href="/glass-bryant">Bryant</a>
+      </div>
+      <div class="footer-col">
         <h4>Contact</h4>
         <a href={`tel:${phoneTel}`}>{phone}</a>
         <a href={`mailto:${email}`}>{email}</a>
-        <p>1903 Hinson Loop Rd<br />Little Rock, AR 72212</p>
+        <p>1903 Hinson Loop Rd #3903<br />Little Rock, AR 72212</p>
       </div>
     </div>
     <div class="footer-bottom">

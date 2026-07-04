@@ -1,0 +1,35 @@
+---
+// Vector logo lockup — faceted diamond mark + wordmark in Manrope.
+// Rebuilt from the raster glasslogo.png so it stays crisp at any size and themes cleanly.
+interface Props { href?: string }
+const { href = '/' } = Astro.props;
+---
+<a href={href} class="wlrg-logo" aria-label="West Little Rock Glass — home">
+  <span class="wlrg-words">
+    <span class="wlrg-top">WEST LITTLE ROCK</span>
+    <span class="wlrg-main">GLASS</span>
+  </span>
+  <svg class="wlrg-gem" viewBox="0 0 100 92" role="img" aria-hidden="true" focusable="false"
+       fill="none" stroke="#12304F" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round">
+    <polygon points="8,36 33,10 67,10 92,36 50,88" />
+    <line x1="8" y1="36" x2="92" y2="36" />
+    <line x1="33" y1="10" x2="30" y2="36" />
+    <line x1="67" y1="10" x2="70" y2="36" />
+    <line x1="30" y1="36" x2="50" y2="88" />
+    <line x1="70" y1="36" x2="50" y2="88" />
+    <line x1="50" y1="36" x2="50" y2="88" />
+  </svg>
+</a>
+<style>
+  .wlrg-logo{display:inline-flex;align-items:center;gap:9px;line-height:1;text-decoration:none}
+  .wlrg-words{display:flex;flex-direction:column;font-family:'Manrope',sans-serif;color:#12304F}
+  .wlrg-top{font-size:0.6rem;font-weight:700;letter-spacing:0.152em}
+  .wlrg-main{font-size:1.32rem;font-weight:800;letter-spacing:0.045em;margin-top:2px}
+  .wlrg-gem{height:34px;width:auto;display:block}
+  .wlrg-logo:focus-visible{outline:2px solid #4A90B8;outline-offset:3px;border-radius:3px}
+  @media(max-width:600px){
+    .wlrg-main{font-size:1.14rem}
+    .wlrg-top{font-size:0.54rem}
+    .wlrg-gem{height:28px}
+  }
+</style>

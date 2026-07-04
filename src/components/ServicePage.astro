@@ -30,7 +30,7 @@ const serviceLd = JSON.stringify({
   name: serviceName,
   serviceType: serviceName,
   areaServed: { '@type': 'City', name: 'Little Rock', containedInPlace: { '@type': 'State', name: 'Arkansas' } },
-  provider: { '@type': 'LocalBusiness', name: 'West Little Rock Glass', telephone: phone, address: { '@type': 'PostalAddress', streetAddress: '1903 Hinson Loop Road', addressLocality: 'Little Rock', addressRegion: 'AR', postalCode: '72212' } },
+  provider: { '@type': 'LocalBusiness', name: 'West Little Rock Glass', telephone: phone, address: { '@type': 'PostalAddress', streetAddress: '1903 Hinson Loop Rd #3903', addressLocality: 'Little Rock', addressRegion: 'AR', postalCode: '72212' } },
   url: `${siteUrl}${path}`,
   ...(emergency ? { hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' } } : {}),
 });
@@ -112,7 +112,7 @@ const faqLd = JSON.stringify({
   <section class="lp-cta">
     <div class="container">
       <h2>{emergency ? 'Glass down? We answer 24/7.' : 'Free estimates. Straight answers. 20+ years of glass.'}</h2>
-      <p>West Little Rock Glass — 1903 Hinson Loop Rd, Little Rock. Family-run, local, and on time.</p>
+      <p>West Little Rock Glass — 1903 Hinson Loop Rd #3903, Little Rock. Family-run, local, and on time.</p>
       <div class="ctas">
         <a class="btn btn-primary" href={`tel:${phoneTel}`}>Call {phone}</a>
         <a class="btn btn-ghost" style="color:var(--white);border-color:rgba(255,255,255,0.4)" href="/#services">All Services</a>
