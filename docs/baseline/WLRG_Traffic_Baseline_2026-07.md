@@ -73,12 +73,6 @@ That is roughly **28 more high-intent local visitors every month** — people ac
 
 ---
 
-## What we need from Gavin: reviews
-
-The single biggest lever on "glass company near me" searches is the **Google Business Profile Map Pack**, and reviews are its fuel. WLRG sits at **3.9★ across 38 reviews** — and the recent reviews are 5★; the average is dragged by old ones. A steady trickle of fresh reviews from happy install customers will move the rating and the Map Pack position faster than anything on the website itself. Ask at every completed install.
-
----
-
 ## Audience context (why this strategy fits)
 
 - **~95% of visitors are brand new.** This is a discovery business; search is the discovery channel.
