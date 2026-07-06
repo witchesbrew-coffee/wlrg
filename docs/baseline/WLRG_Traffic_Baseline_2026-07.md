@@ -18,8 +18,6 @@ Pre-launch baseline of the current website's traffic, captured before the new si
 
 > **The goal:** grow organic search traffic by **25%**, from roughly **110 to ~138 sessions per month**. Over a full year that is about **+330 organic visits**, on top of the current ~1,325.
 
-> **The finding that matters most:** traffic has been **drifting down about 22% year-over-year** — summer/fall 2025 averaged ~193 sessions/month, spring 2026 averaged ~151. The old site is losing ground, not holding it. The new site's first job is to stop the slide; its second is to grow past the old peak.
-
 Organic search is already the engine of this website. It brings in two of every three visitors. Growing it is the highest-leverage way to bring more of the right local customers to West Little Rock Glass, and it is what the new site was built to do.
 
 ---
@@ -54,18 +52,6 @@ Organic search is already the engine of this website. It brings in two of every 
 | Jul 2026 *(partial, through Jul 5)* | 25 | 15 | 10 | 0 | 60% |
 
 **Baseline totals (Jul 2025 – Jun 2026):** 1,996 sessions · 1,325 organic (66%) · 631 direct (32%) · 40 referral/other (2%). A small first trickle of AI-platform traffic (ChatGPT) shows up in "Referral / other" starting December 2025.
-
----
-
-## The trend: a slow leak the new site has to fix
-
-| Period | Avg sessions / month |
-|---|---:|
-| Jul–Nov 2025 | ~193 |
-| Feb–Jun 2026 | ~151 |
-| **Change** | **−22%** |
-
-This is what an aging site looks like in the data: rankings erode a little every month as competitors publish faster, more relevant pages. Nothing dramatic happens — the phone just rings a bit less each season. The rebuild (speed, dedicated service and city pages, structured data) is aimed directly at this.
 
 ---
 

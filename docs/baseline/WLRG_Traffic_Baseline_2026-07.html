@@ -23,8 +23,8 @@
   .pad{padding:0 0.72in}
 
   /* cover */
-  .cover{background:radial-gradient(ellipse at 85% 0%, rgba(74,168,220,.30), transparent 55%),radial-gradient(ellipse at 0% 100%, rgba(52,211,153,.12), transparent 45%),var(--ink);color:#fff;padding:0.7in 0.72in 0.62in;position:relative;overflow:hidden}
-  .cover__top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1.45in}
+  .cover{background:radial-gradient(ellipse at 85% 0%, rgba(74,168,220,.30), transparent 55%),radial-gradient(ellipse at 0% 100%, rgba(52,211,153,.12), transparent 45%),var(--ink);color:#fff;padding:.5in .72in .42in;position:relative;overflow:hidden}
+  .cover__top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.32in}
   .wordmark{font-family:'Press Start 2P',monospace;font-size:20px;color:#fff}
   .wordmark span{color:var(--sky)}
   .cover__for{text-align:right;max-width:2.6in}
@@ -41,28 +41,28 @@
   .skyline i{display:block;width:9px;background:linear-gradient(var(--sky),rgba(74,168,220,.25));border-radius:1px}
 
   /* exec summary band */
-  .tldr{background:var(--navy);color:#D9E6F4;padding:.34in .72in;font-size:14.5px;line-height:1.62}
+  .tldr{background:var(--navy);color:#D9E6F4;padding:.24in .72in;font-size:14px;line-height:1.6}
   .tldr .eyebrow{color:var(--sky-lt);display:block;margin-bottom:.55rem}
   .tldr b{color:#fff}
 
   /* stat band */
   .stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--paper)}
-  .stat{padding:.4in .3in;border-right:1px solid var(--line)}
+  .stat{padding:.28in .3in;border-right:1px solid var(--line)}
   .stat:last-child{border-right:none;background:linear-gradient(180deg,rgba(52,211,153,.10),rgba(52,211,153,.03))}
   .stat .num{font-family:'Press Start 2P',monospace;font-size:23px;color:var(--navy);line-height:1.25}
   .stat:last-child .num{color:var(--emerald-dk)}
   .stat .lbl{font-size:11.5px;color:var(--muted);margin-top:.6rem;line-height:1.45;font-weight:500}
   .stat .sub{font-size:10.5px;color:var(--sky);font-weight:700;margin-top:.25rem}
 
-  section{padding:.38in 0}
+  section{padding:.2in 0}
   h2{font-size:20px;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:.2rem}
   .sec-eyebrow{margin-bottom:.7rem;display:inline-block}
   h2 + p,.lead{color:var(--muted);font-size:14.5px;margin-bottom:1rem}
   p{margin-bottom:.7rem}strong{color:var(--text)}
   .divider{height:1px;background:var(--line)}
 
-  .goal{background:linear-gradient(135deg,rgba(52,211,153,.14),rgba(74,168,220,.08));border:1px solid rgba(52,211,153,.4);border-left:4px solid var(--emerald);border-radius:8px;padding:1.05rem 1.25rem;display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
-  .goal__big{font-family:'Press Start 2P',monospace;font-size:30px;color:var(--emerald-dk);white-space:nowrap}
+  .goal{background:linear-gradient(135deg,rgba(52,211,153,.14),rgba(74,168,220,.08));border:1px solid rgba(52,211,153,.4);border-left:4px solid var(--emerald);border-radius:8px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+  .goal__big{font-family:'Press Start 2P',monospace;font-size:25px;color:var(--emerald-dk);white-space:nowrap}
   .goal__body{flex:1;min-width:240px}.goal__body b{color:var(--navy)}
   .goal__why{font-size:12px;color:var(--muted);margin-top:.6rem;font-style:italic}
 
@@ -80,10 +80,10 @@
   svg.viz{width:100%;height:auto;display:block}
 
   /* table */
-  table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:.4rem}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:.4rem}
   thead th{background:var(--ink);color:#fff;font-weight:600;text-align:right;padding:.5rem .55rem;font-size:10px;letter-spacing:.04em;text-transform:uppercase}
   thead th:first-child{text-align:left;border-radius:5px 0 0 0}thead th:last-child{border-radius:0 5px 0 0}
-  tbody td{padding:.34rem .55rem;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+  tbody td{padding:.28rem .55rem;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
   tbody td:first-child{text-align:left;font-weight:600;color:var(--navy)}
   tbody tr:nth-child(even){background:var(--paper-2)}
   .col-org{color:var(--emerald-dk);font-weight:700;background:rgba(52,211,153,.07)}
@@ -113,13 +113,13 @@
   .compare{background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin-top:.9rem;font-size:13px;color:var(--muted)}
   .compare b{color:var(--navy)}
 
-  .drivers{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:.3rem}
-  .driver{border:1px solid var(--line);border-radius:8px;padding:.8rem 1rem;background:var(--paper)}
+  .drivers{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:.55rem;margin-top:.3rem}
+  .driver{border:1px solid var(--line);border-radius:8px;padding:.65rem .75rem;background:var(--paper)}
   .driver .n{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--sky);margin-bottom:.5rem}
-  .driver h4{font-size:13px;color:var(--navy);margin-bottom:.25rem}.driver p{font-size:12.5px;color:var(--muted);margin:0}
+  .driver h4{font-size:12px;color:var(--navy);margin-bottom:.25rem}.driver p{font-size:11px;color:var(--muted);margin:0;line-height:1.5}
 
   /* ask */
-  .ask{background:var(--ink);color:#D9E6F4;border-radius:8px;padding:1.05rem 1.25rem;display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:center}
+  .ask{background:var(--ink);color:#D9E6F4;border-radius:8px;padding:.85rem 1.1rem;display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:center}
   .ask .star{font-family:'Press Start 2P',monospace;font-size:22px;color:var(--emerald)}
   .ask h4{color:#fff;font-size:15px;margin-bottom:.3rem}
   .ask p{margin:0;font-size:13px;color:#B9CADD}
@@ -138,7 +138,7 @@
   .src-note{font-size:11.5px;color:var(--muted);font-style:italic;background:var(--paper-2);border-radius:6px;padding:.6rem .8rem;margin-top:.4rem}
 
   /* footer */
-  .foot{background:var(--ink);color:#fff;padding:.45in .72in}
+  .foot{background:var(--ink);color:#fff;padding:.26in .72in}
   .foot__row{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
   .foot .wordmark{font-size:16px}
   .foot__tag{font-size:12px;color:var(--sky-lt);margin-top:.5rem}
@@ -150,7 +150,8 @@
   @media print{
     body{background:#fff}
     .sheet{box-shadow:none;max-width:none;margin:0}
-    section,.goal,.trend,.chip,.driver,.why .item,.means,.ask,.cc,.chart,table,tr{break-inside:avoid}
+    .goal,.chip,.driver,.ask,.chart,tr{break-inside:avoid}
+    h2,.sec-eyebrow{break-after:avoid}
     thead{display:table-header-group}
   }
 </style>
@@ -178,7 +179,7 @@
   <!-- EXEC SUMMARY -->
   <div class="tldr">
     <span class="eyebrow">The short version</span>
-    Your website draws <b>about 166 visits a month</b>, and <b>two of every three come from Google search</b> — people in Arkansas actively looking for shower doors, mirrors, glass railings, storefront glass, and glass repair. But the trend line matters: traffic has <b>drifted down about 22% over the past year</b>. The old site is slowly losing ground. The new site's first job is to stop that slide; the goal we will measure it against is growing organic search <b>25%</b> past today's level. This report is the "before" line.
+    Your website draws <b>about 166 visits a month</b>, and <b>two of every three come from Google search</b> — people in Arkansas actively looking for shower doors, mirrors, glass railings, storefront glass, and glass repair. Organic search is the engine of the site, and the goal for the new one is simple: grow it <b>25%</b>. This report is the "before" line we will measure that against.
   </div>
 
   <!-- STAT BAND -->
@@ -192,36 +193,21 @@
   <div class="pad">
 
     <!-- GOAL -->
-    <section>
+    <section style="break-inside:avoid">
       <span class="eyebrow sec-eyebrow">The goal</span>
       <h2>Grow organic search traffic by 25%</h2>
       <div class="goal">
         <div class="goal__big">110&nbsp;→&nbsp;138</div>
         <div class="goal__body">
-          That is about <b>28 more high-intent local visitors every month</b>, roughly <b>330 more per year</b>, all of them people actively searching for the work you do. Organic search is already the engine of the website. Growing it is the highest-leverage way to bring more of the right customers to the shop, and it is what the new site was built to do.
-          <div class="goal__why">Why 25%? It is a realistic 12-month target for a site rebuild plus local-search work, not a stretch. Local rebuilds commonly lift organic 20–50% over a year; we set the floor of that range so the goal is one we beat, not chase.</div>
+          That is about <b>28 more high-intent local visitors every month</b>, roughly <b>330 more per year</b> — all people actively searching for the work you do.
+          <div class="goal__why">Why 25%? A realistic 12-month target for a rebuild plus local-search work — the floor of the typical 20–50% range, so it's a goal we beat, not chase.</div>
         </div>
       </div>
     </section>
 
     <div class="divider"></div>
-
-    <!-- TREND -->
-    <section>
-      <span class="eyebrow sec-eyebrow">The finding that matters</span>
-      <h2>Traffic has been leaking for a year</h2>
-      <div class="trend">
-        <div class="trend__big">193&nbsp;→&nbsp;151</div>
-        <div class="trend__body">
-          Summer and fall 2025 averaged <b>~193 visits a month</b>. Spring 2026 averaged <b>~151</b> — a drop of about <b>22% year-over-year</b>. This is what an aging website looks like in the data: rankings erode a little every month as competitors publish faster, more relevant pages. Nothing dramatic happens — the phone just rings a bit less each season. The rebuild is aimed directly at reversing this, first back to the old peak, then past it.
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- CHARTS -->
-    <section>
+<!-- CHARTS -->
+    <section style="break-before:page">
       <span class="eyebrow sec-eyebrow">Traffic at a glance</span>
       <h2>The picture</h2>
       <div class="chart">
@@ -239,26 +225,28 @@
     </section>
 
     <div class="divider"></div>
-
-    <!-- WHAT WE MEASURED -->
+<!-- DRIVERS -->
     <section>
-      <span class="eyebrow sec-eyebrow">What we measured</span>
-      <h2>Real numbers, not estimates</h2>
-      <p>Over the 12 full months from <strong>July 2025 to June 2026</strong>, the site received <strong>1,996 visits</strong>, an average of <strong>about 166 per month</strong> from roughly <strong>133 unique people</strong>.</p>
-      <div class="src-note">Source: your current website's own (Wix) analytics, July 2025 – June 2026 — real recorded data, not estimates. Going forward we have installed <strong>Google Analytics 4</strong> and <strong>Google Search Console</strong> to track the new site — those tools only collect from the day they were installed, which is why this "before" picture comes from the existing analytics.</div>
+      <span class="eyebrow sec-eyebrow">How we get there</span>
+      <h2>What drives the +25%</h2>
+      <p>Every lever below is built into the new website.</p>
+      <div class="drivers">
+        <div class="driver"><div class="n">01</div><h4>A faster, modern site</h4><p>Speed is a direct ranking factor. The new site is lean static pages instead of the heavier Wix setup it replaces.</p></div>
+        <div class="driver"><div class="n">02</div><h4>Pages that match real searches</h4><p>Five service pages plus eleven city pages (the metro + Hot Springs, Greers Ferry, Bentonville) give Google a strong page to rank for each search.</p></div>
+        <div class="driver"><div class="n">03</div><h4>Search &amp; local data built in</h4><p>Structured data, unique titles on every page, a clean sitemap, and 301 redirects that preserve existing link equity.</p></div>
+        <div class="driver"><div class="n">04</div><h4>Clean measurement in place</h4><p>GA4 + Search Console connected; overseas bot traffic blocked at the edge so what we report is real customers.</p></div>
+      </div>
     </section>
 
     <div class="divider"></div>
-
-    <!-- MONTHLY TABLE -->
-    <section>
+<!-- MONTHLY TABLE -->
+    <section style="break-before:page">
       <span class="eyebrow sec-eyebrow">Month by month</span>
       <h2>Traffic breakdown</h2>
       <p>"Organic search" = visitors who found you through a search engine. "Direct" = typed your address or used a bookmark. "Referral / other" = links from other sites.</p>
       <table>
         <thead><tr><th>Month</th><th>Total visits</th><th class="col-org">Organic search</th><th>Direct</th><th>Referral / other</th><th>Organic %</th></tr></thead>
         <tbody>
-          <tr class="context"><td>Jun 2025</td><td>194</td><td class="col-org">142</td><td>50</td><td>2</td><td>73%</td></tr>
           <tr><td>Jul 2025</td><td>213</td><td class="col-org">147</td><td>64</td><td>2</td><td>69%</td></tr>
           <tr><td>Aug 2025</td><td>194</td><td class="col-org">114</td><td>79</td><td>1</td><td>59%</td></tr>
           <tr><td>Sep 2025</td><td>192</td><td class="col-org">110</td><td>79</td><td>3</td><td>57%</td></tr>
@@ -272,60 +260,9 @@
           <tr><td>May 2026</td><td>147</td><td class="col-org">98</td><td>44</td><td>5</td><td>67%</td></tr>
           <tr><td>Jun 2026</td><td>160</td><td class="col-org">116</td><td>42</td><td>2</td><td>73%</td></tr>
           <tr class="totals"><td>12-mo baseline</td><td>1,996</td><td class="col-org">1,325</td><td>631</td><td>40</td><td>66%</td></tr>
-          <tr class="context"><td>Jul 2026 (partial, thru Jul 5)</td><td>25</td><td class="col-org">15</td><td>10</td><td>0</td><td>60%</td></tr>
         </tbody>
       </table>
-      <p class="tnote">Jun 2025 and partial July 2026 are shown for context and excluded from the averages. A small first trickle of AI-platform traffic (ChatGPT) shows up in "Referral / other" starting December 2025.</p>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- WHAT THIS MEANS FOR YOUR SHOP -->
-    <section>
-      <span class="eyebrow sec-eyebrow">What this means for your shop</span>
-      <h2>Visits are the start of a job</h2>
-      <div class="means">
-        <div class="big">About <span>4 ready-to-buy local searchers</span> find you on Google every day, for free.</div>
-        Traffic is not the goal by itself; it is the top of the path to an install. Someone searches, lands on your site, then calls or sends a quote request, and that becomes a job. Growing organic search widens the top of that path — and because glass work runs from a $150 repair to a five-figure commercial job, a handful of extra searchers a week is real money.
-        <div class="funnel">
-          <div class="fstep"><div class="n">~4 / day</div><div class="l">Organic searchers find you</div></div>
-          <div class="fstep"><div class="n">Visit</div><div class="l">Land on a page about what they need</div></div>
-          <div class="fstep measure"><div class="n">NOW MEASURING</div><div class="l">Quote request or phone call</div></div>
-          <div class="fstep"><div class="n">Job</div><div class="l">Measured, quoted, installed</div></div>
-        </div>
-        <div class="tocapture"><b>To capture next:</b> the new site tracks quote-form submissions and phone taps, tagged with the page that produced them — so the next report can show not just how many people visit, but how many turn into leads, and whether they came from the shower page, the railing page, or a city page like Hot Springs.</div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- WHY ORGANIC -->
-    <section>
-      <span class="eyebrow sec-eyebrow">Why it matters most</span>
-      <h2>Organic search is the channel worth growing</h2>
-      <p>It is the largest source of traffic by far, about <strong>66% of every visit</strong>, and it has led every single month on record. Here is why it is the channel to invest in.</p>
-      <div class="why">
-        <div class="item"><div class="dot">1</div><div><h4>The highest-intent traffic there is</h4><p>Someone searching "frameless shower doors Little Rock" or "glass repair near me" is looking to hire, not browsing. That is the most valuable visitor a local shop can get.</p></div></div>
-        <div class="item"><div class="dot">2</div><div><h4>Essentially free, and it compounds</h4><p>Unlike paid ads, you do not pay per click, and the work that improves rankings keeps paying off. Ads stop when you stop paying; rankings keep working.</p></div></div>
-        <div class="item"><div class="dot">3</div><div><h4>The modern storefront sign</h4><p>After 20+ years in the metro, ranking on Google for local searches is today's version of being the first name people think of. With ~95% of visitors brand new, search is how central Arkansas discovers you.</p></div></div>
-        <div class="item"><div class="dot">4</div><div><h4>Trusted and measurable</h4><p>People trust organic results more than ads, and we can see which searches bring people in and steadily improve. It is a lever we control, not luck.</p></div></div>
-      </div>
-      <div class="compare">By contrast, <b>direct traffic</b> (32%) is mostly returning customers, builders you already work with, and word of mouth — valuable and loyal, but it does not grow the customer base on its own. <b>Referral traffic</b> (2%) is minimal. Organic search is the one channel that both brings in new customers and can be deliberately grown.</div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- DRIVERS -->
-    <section>
-      <span class="eyebrow sec-eyebrow">How we get there</span>
-      <h2>What drives the +25%</h2>
-      <p>Every lever below is built into the new website.</p>
-      <div class="drivers">
-        <div class="driver"><div class="n">01</div><h4>A faster, modern site</h4><p>Speed is a direct ranking factor. The new site is lean static pages instead of the heavier Wix setup it replaces.</p></div>
-        <div class="driver"><div class="n">02</div><h4>Pages that match real searches</h4><p>Five dedicated service pages (showers, mirrors, railings, storefronts, 24-hour repair) plus eleven city pages — the Little Rock metro plus Hot Springs, Greers Ferry, and Bentonville — give Google a strong page to rank for each search.</p></div>
-        <div class="driver"><div class="n">03</div><h4>Search and local data built in</h4><p>LocalBusiness, Service, and FAQ structured data, unique titles on every page, a clean sitemap, and 301 redirects that preserve the old site's link equity.</p></div>
-        <div class="driver"><div class="n">04</div><h4>Clean measurement in place</h4><p>GA4 and Search Console are connected, and overseas bot traffic is blocked at the edge before it can pollute the numbers — so what we report is real customers.</p></div>
-      </div>
+      <p class="tnote">Source: the current website's own (Wix) analytics — real recorded data, not estimates. Going forward, GA4 + Search Console (now installed) take over measurement from launch.</p>
     </section>
 
     <div class="divider"></div>
@@ -338,34 +275,8 @@
         <div class="star">★</div>
         <div>
           <h4>Ask happy customers for a Google review</h4>
-          <p>The biggest lever on searches like "glass company near me" is your Google Business Profile in the map results, and reviews are its fuel. You sit at 3.9★ across 38 reviews — and your recent reviews are 5★; the average is being dragged by old ones. If everyone who gets an install is asked for a quick review, the rating climbs, the map ranking climbs with it, and that compounds into calls the website alone cannot buy.</p>
+          <p>The biggest lever on searches like "glass company near me" is your Google Business Profile in the map results, and reviews are its fuel. You sit at 3.9★ across 38 reviews — and your recent reviews are 5★; the average is dragged by old ones. If everyone who gets an install is asked for a quick review, the rating and the map ranking climb together — calls the website alone cannot buy.</p>
         </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- HOW WE MEASURE -->
-    <section>
-      <span class="eyebrow sec-eyebrow">How we measure progress</span>
-      <h2>Tracking the goal</h2>
-      <div class="cadence">
-        <div class="cc"><span class="k">Timeframe</span><p><b>12 months</b> from launch to hit +25% organic — with "stop the year-long slide" as the first checkpoint.</p></div>
-        <div class="cc"><span class="k">Reporting</span><p>A <b>monthly update</b> comparing organic visits, top search terms, and leads against this baseline.</p></div>
-        <div class="cc"><span class="k">Tools</span><p><b>GA4 + Search Console</b>, now installed, plus phone-tap and quote-request tracking on the new site.</p></div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- AUDIENCE -->
-    <section>
-      <span class="eyebrow sec-eyebrow">Who is visiting</span>
-      <h2>The audience supports a local-search focus</h2>
-      <div class="chips">
-        <div class="chip"><div class="num">~95%</div><div class="lbl">of visitors are brand new. This is a discovery business, and search is the discovery channel.</div></div>
-        <div class="chip"><div class="num">AR</div><div class="lbl">A local Arkansas market to win — and the new site adds pages for Hot Springs, Greers Ferry, and Bentonville to widen it.</div></div>
-        <div class="chip"><div class="num">50 / 50</div><div class="lbl">Desktop and mobile split the audience almost evenly. The new site is fully responsive for both.</div></div>
       </div>
     </section>
 
