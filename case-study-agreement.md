@@ -2,9 +2,9 @@
 
 **Between:**
 - **BitBrd** ("Agency") — Paul DeSana
-- **West Little Rock Glass** ("Client") — Gavin [LAST NAME]
+- **West Little Rock Glass** ("Client") — Gavin Higgins
 
-**Date:** April _____, 2026
+**Date:** July _____, 2026
 
 ---
 
@@ -102,7 +102,7 @@ Date: _______________
 
 **West Little Rock Glass — Client**
 
-Name: ___________________________
+Name: Gavin Higgins
 Signature: ___________________________
 Date: _______________
 
