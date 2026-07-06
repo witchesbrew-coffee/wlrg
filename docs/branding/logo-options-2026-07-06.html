@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>West Little Rock Glass — Logo Options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;600;700;800&family=Archivo:wght@600;700&family=Archivo+Black&family=Sora:wght@400;600;700&family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=Space+Grotesk:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Outfit:wght@300;400;600;700&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #12304F;
+    --steel: #29567D;
+    --blue: #4A90B8;
+    --ice: #A8CEE4;
+    --pale: #Eef5FA;
+    --amber: #D9A441;
+    --ink: #1a2734;
+    --mut: #5a6b7d;
+    --line: #dbe5ee;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #f2f4f7; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); }
+
+  .sheet {
+    width: 8.5in; height: 11in;
+    background: #fff;
+    margin: 0 auto;
+    padding: 0.55in 0.6in 0.5in;
+    display: flex; flex-direction: column;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .head { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid var(--navy); padding-bottom: 10px; }
+  .head h1 { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 17px; color: var(--navy); letter-spacing: 0.01em; }
+  .head .meta { font-size: 9.5px; color: var(--mut); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+  .sub { margin-top: 8px; font-size: 10.5px; line-height: 1.55; color: var(--mut); max-width: 5.9in; }
+  .sub b { color: var(--ink); font-weight: 600; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; flex: 1; }
+  .grid--icons { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); }
+
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+  }
+  .card__art {
+    flex: 1;
+    display: grid; place-items: center;
+    background: linear-gradient(180deg, #fbfdfe, var(--pale));
+    padding: 14px 10px;
+  }
+  .card__art svg { display: block; }
+  .card__cap { border-top: 1px solid var(--line); padding: 8px 10px 9px; }
+  .card__id { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 10.5px; color: var(--navy); letter-spacing: 0.04em; }
+  .card__id span { color: var(--amber); }
+  .card__note { font-size: 8.6px; line-height: 1.45; color: var(--mut); margin-top: 2px; }
+
+  .grid--type { grid-template-rows: repeat(4, 1fr); }
+  .tcard .card__art { padding: 10px 14px; }
+
+  .foot { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 8px; display: flex; justify-content: space-between; font-size: 8.5px; color: var(--mut); }
+  .foot b { color: var(--navy); font-weight: 700; }
+
+  /* ── Wordmark treatments ── */
+  .wm { display: flex; flex-direction: column; align-items: center; text-align: center; color: var(--navy); }
+
+  .t1 .rule-row { display: flex; align-items: center; gap: 8px; }
+  .t1 .rule-row::before, .t1 .rule-row::after { content: ''; height: 1px; width: 26px; background: var(--blue); }
+  .t1 .top { font-family: 'Manrope'; font-weight: 600; font-size: 10.5px; letter-spacing: 0.34em; }
+  .t1 .main { font-family: 'Manrope'; font-weight: 800; font-size: 40px; letter-spacing: 0.13em; margin-top: 2px; text-indent: 0.13em; }
+
+  .t2 .top { font-family: 'Archivo'; font-weight: 600; font-size: 10px; letter-spacing: 0.46em; color: var(--steel); text-indent: 0.46em; }
+  .t2 .main { font-family: 'Archivo Black'; font-size: 42px; letter-spacing: 0.045em; margin-top: 1px; display: flex; align-items: center; gap: 8px; }
+  .t2 .main::after { content: ''; width: 9px; height: 9px; background: var(--amber); transform: rotate(45deg); }
+
+  .t3 .top { font-family: 'Fraunces'; font-style: italic; font-weight: 300; font-size: 20px; color: var(--steel); }
+  .t3 .main { font-family: 'Sora'; font-weight: 700; font-size: 30px; letter-spacing: 0.32em; text-indent: 0.32em; margin-top: 3px; }
+
+  .t4 .line { font-family: 'Space Grotesk'; font-weight: 500; font-size: 16.5px; letter-spacing: 0.13em; display: flex; align-items: center; gap: 11px; white-space: nowrap; }
+  .t4 .line b { font-weight: 600; color: var(--navy); }
+  .t4 .line .sep { width: 8px; height: 8px; background: var(--amber); transform: rotate(45deg); flex: 0 0 auto; }
+  .t4 .line .l { color: var(--steel); }
+
+  .t5 .top { font-family: 'Manrope'; font-weight: 600; font-size: 10px; letter-spacing: 0.4em; color: var(--steel); text-indent: 0.4em; }
+  .t5 .main {
+    font-family: 'Manrope'; font-weight: 800; font-size: 44px; letter-spacing: 0.1em; text-indent: 0.1em; margin-top: 0;
+    background: linear-gradient(100deg, var(--navy) 15%, var(--blue) 60%, #7FB8D8 92%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  .t6 .main { font-family: 'Playfair Display'; font-weight: 500; font-size: 27px; letter-spacing: 0.03em; }
+  .t6 .underline { width: 54px; height: 2px; background: var(--amber); margin-top: 7px; }
+
+  .t7 .line { font-family: 'Outfit'; font-size: 30px; }
+  .t7 .line .l { font-weight: 300; color: var(--steel); }
+  .t7 .line b { font-weight: 700; color: var(--navy); }
+
+  .t8 .top { font-family: 'Barlow Condensed'; font-weight: 600; font-size: 17px; letter-spacing: 0.24em; text-indent: 0.24em; color: var(--steel); }
+  .t8 .main { font-family: 'Barlow Condensed'; font-weight: 700; font-size: 52px; letter-spacing: 0.1em; text-indent: 0.1em; line-height: 0.95; margin-top: 1px; }
+  .t8 .block { width: 92px; height: 5px; background: var(--amber); margin-top: 5px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ PAGE 1 — DIAMOND MARKS ═══════════ -->
+<div class="sheet">
+  <div class="head">
+    <h1>West Little Rock Glass · Logo Refresh</h1>
+    <span class="meta">Prepared by BitBrd · July 2026 · 1 of 2</span>
+  </div>
+  <p class="sub"><b>Page 1: the mark.</b> Eight vector diamond concepts, all drawn from scratch and crisp at any size,
+    from a favicon to a truck door. Colors shown in the site palette; any mark can be produced in solid navy or white for
+    single-color uses. Pick a favorite by number.</p>
+
+  <div class="grid grid--icons">
+
+    <div class="card">
+      <div class="card__art">
+        <svg width="96" height="90" viewBox="0 0 100 94" fill="none" stroke-linejoin="round" stroke-linecap="round">
+          <polygon points="8,38 32,12 68,12 92,38 50,90" stroke="#12304F" stroke-width="4"/>
+          <g stroke="#4A90B8" stroke-width="1.8">
+            <line x1="8" y1="38" x2="92" y2="38"/>
+            <line x1="32" y1="12" x2="30" y2="38"/>
+            <line x1="68" y1="12" x2="70" y2="38"/>
+            <line x1="30" y1="38" x2="50" y2="90"/>
+            <line x1="70" y1="38" x2="50" y2="90"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">D1 <span>·</span> DUAL LINE</div>
+        <div class="card__note">Evolution of the current mark: heavy navy silhouette, fine glass-blue facets. Familiar but sharper.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__art">
+        <svg width="96" height="90" viewBox="0 0 100 94">
+          <polygon points="10,38 32,12 34,38" fill="#7FB8D8"/>
+          <polygon points="32,12 68,12 66,38 34,38" fill="#A8CEE4"/>
+          <polygon points="68,12 90,38 66,38" fill="#7FB8D8"/>
+          <polygon points="10,38 34,38 50,90" fill="#29567D"/>
+          <polygon points="34,38 66,38 50,90" fill="#4A90B8"/>
+          <polygon points="66,38 90,38 50,90" fill="#12304F"/>
+        </svg>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">D2 <span>·</span> CUT GEM</div>
+        <div class="card__note">Fully faceted fill in five blues. Reads premium and substantial; the classic jeweler treatment.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__art">
+        <svg width="96" height="90" viewBox="0 0 100 94">
+          <defs>
+            <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#12304F"/>
+              <stop offset="0.55" stop-color="#4A90B8"/>
+              <stop offset="1" stop-color="#A8CEE4"/>
+            </linearGradient>
+          </defs>
+          <polygon points="8,38 32,12 68,12 92,38 50,90" fill="url(#sheen)"/>
+          <polygon points="36,12 52,12 24,66 16,48" fill="#ffffff" opacity="0.38"/>
+          <polygon points="60,12 66,12 38,80 34,72" fill="#ffffff" opacity="0.26"/>
+          <path d="M79 6 l2.6 6.4 6.4 2.6 -6.4 2.6 -2.6 6.4 -2.6 -6.4 -6.4 -2.6 6.4 -2.6 Z" fill="#D9A441"/>
+        </svg>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">D3 <span>·</span> LIGHT SWEEP</div>
+        <div class="card__note">Gradient glass with a light glint and an amber spark. Matches the hero sheen animation on the site.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__art">
+        <svg width="96" height="90" viewBox="0 0 100 94" fill="none" stroke-linejoin="round">
+          <polygon points="28,10 72,10 92,30 92,58 72,84 28,84 8,58 8,30" stroke="#12304F" stroke-width="4"/>
+          <polygon points="34,20 66,20 82,34 82,54 66,74 34,74 18,54 18,34" stroke="#4A90B8" stroke-width="2"/>
+          <polygon points="40,30 60,30 72,39 72,50 60,64 40,64 28,50 28,39" stroke="#7FB8D8" stroke-width="1.6"/>
+        </svg>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">D4 <span>·</span> EMERALD CUT</div>
+        <div class="card__note">Architectural step-cut octagon. Quieter and more structural; suits storefront and commercial work.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__art">
+        <svg width="96" height="90" viewBox="0 0 100 94">
+          <polygon points="8,38 32,12 42,12 25,60" fill="#12304F"/>
+          <polygon points="49,12 61,12 45,80 33,68" fill="#4A90B8"/>
+          <polygon points="68,12 92,38 53,86 52,64" fill="#A8CEE4"/>
+        </svg>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">D5 <span>·</span> PANES</div>
+        <div class="card__note">The diamond broken into three glass panes with daylight between them. Modern, distinctive, ownable.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__art">
+        <svg width="96" height="90" viewBox="0 0 100 94">
+          <polygon points="8,38 32,12 50,40" fill="#4A90B8"/>
+          <polygon points="32,12 68,12 50,40" fill="#A8CEE4"/>
+          <polygon points="68,12 92,38 50,40" fill="#29567D"/>
+          <polygon points="92,38 50,90 50,40" fill="#7FB8D8"/>
+          <polygon points="50,90 8,38 50,40" fill="#12304F"/>
+        </svg>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">D6 <span>·</span> PINWHEEL</div>
+        <div class="card__note">Facets rotate around an off-center point, like light turning through a stone. Energetic, still clean.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__art">
+        <svg width="96" height="90" viewBox="0 0 100 94" fill="none" stroke-linecap="round">
+          <polygon points="8,38 32,12 68,12 92,38 50,90" stroke="#12304F" stroke-width="4" stroke-linejoin="round"/>
+          <line x1="0" y1="14" x2="44" y2="44" stroke="#D9A441" stroke-width="4"/>
+          <line x1="44" y1="44" x2="96" y2="50" stroke="#4A90B8" stroke-width="3.4"/>
+          <line x1="44" y1="44" x2="88" y2="70" stroke="#7FB8D8" stroke-width="3.4"/>
+          <line x1="44" y1="44" x2="66" y2="92" stroke="#A8CEE4" stroke-width="3.4"/>
+        </svg>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">D7 <span>·</span> REFRACTION</div>
+        <div class="card__note">One beam of light enters, glass bends it into three. A story in a mark: what glass actually does.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__art">
+        <svg width="96" height="90" viewBox="0 0 100 94">
+          <polygon points="4,34 26,10 58,10 80,34 42,84" fill="#4A90B8" opacity="0.55"/>
+          <polygon points="20,42 42,18 74,18 96,42 58,92" fill="#12304F" opacity="0.62"/>
+        </svg>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">D8 <span>·</span> LAYERS</div>
+        <div class="card__note">Two translucent diamonds overlapping, the way stacked glass deepens in color. Soft, contemporary.</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot">
+    <span><b>How to choose:</b> reply with one D number and one T number; we combine them into the final lockup, favicon and truck-ready files.</span>
+    <span>BitBrd · bitbrd.com</span>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 2 — WORDMARKS ═══════════ -->
+<div class="sheet">
+  <div class="head">
+    <h1>West Little Rock Glass · Logo Refresh</h1>
+    <span class="meta">Prepared by BitBrd · July 2026 · 2 of 2</span>
+  </div>
+  <p class="sub"><b>Page 2: the name.</b> Eight type treatments for the company name. Any wordmark pairs with any mark from
+    page 1 (or stands alone). All are real fonts licensed for web and print, so what you pick here is exactly what ships.</p>
+
+  <div class="grid grid--type">
+
+    <div class="card tcard">
+      <div class="card__art">
+        <div class="wm t1">
+          <div class="rule-row"><span class="top">WEST LITTLE ROCK</span></div>
+          <div class="main">GLASS</div>
+        </div>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">T1 <span>·</span> REFINED CURRENT</div>
+        <div class="card__note">Same bones as today, reweighted: wider tracking, hairline rules, more presence. The safe upgrade.</div>
+      </div>
+    </div>
+
+    <div class="card tcard">
+      <div class="card__art">
+        <div class="wm t2">
+          <div class="top">WEST LITTLE ROCK</div>
+          <div class="main">GLASS</div>
+        </div>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">T2 <span>·</span> BLOCK &amp; SIGNET</div>
+        <div class="card__note">Heavyweight block letters with an amber signet. Confident, contractor-strength, reads at highway speed.</div>
+      </div>
+    </div>
+
+    <div class="card tcard">
+      <div class="card__art">
+        <div class="wm t3">
+          <div class="top">West Little Rock</div>
+          <div class="main">GLASS</div>
+        </div>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">T3 <span>·</span> SCRIPT &amp; STONE</div>
+        <div class="card__note">A literary italic over wide-set capitals. The custom-shower, design-magazine end of the market.</div>
+      </div>
+    </div>
+
+    <div class="card tcard">
+      <div class="card__art">
+        <div class="wm t4">
+          <div class="line"><span class="l">WEST LITTLE ROCK</span><span class="sep"></span><b>GLASS</b></div>
+        </div>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">T4 <span>·</span> ONE LINE</div>
+        <div class="card__note">Everything on a single line with an amber diamond pivot. Great in website headers and email signatures.</div>
+      </div>
+    </div>
+
+    <div class="card tcard">
+      <div class="card__art">
+        <div class="wm t5">
+          <div class="top">WEST LITTLE ROCK</div>
+          <div class="main">GLASS</div>
+        </div>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">T5 <span>·</span> GLASS GRADIENT</div>
+        <div class="card__note">The name itself becomes glass: navy pouring into ice blue. Pairs naturally with D3's light sweep.</div>
+      </div>
+    </div>
+
+    <div class="card tcard">
+      <div class="card__art">
+        <div class="wm t6">
+          <div class="main">West Little Rock Glass</div>
+          <div class="underline"></div>
+        </div>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">T6 <span>·</span> ESTABLISHED SERIF</div>
+        <div class="card__note">Classic bookface, title case, a single gold rule. The 20-years-of-craft voice; ages beautifully.</div>
+      </div>
+    </div>
+
+    <div class="card tcard">
+      <div class="card__art">
+        <div class="wm t7">
+          <div class="line"><span class="l">west little rock </span><b>glass</b></div>
+        </div>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">T7 <span>·</span> MODERN LOWER</div>
+        <div class="card__note">Lowercase, two weights, two blues. The most contemporary of the set; feels like a design studio.</div>
+      </div>
+    </div>
+
+    <div class="card tcard">
+      <div class="card__art">
+        <div class="wm t8">
+          <div class="top">WEST LITTLE ROCK</div>
+          <div class="main">GLASS</div>
+          <div class="block"></div>
+        </div>
+      </div>
+      <div class="card__cap">
+        <div class="card__id">T8 <span>·</span> SHOP SIGN</div>
+        <div class="card__note">Tall condensed capitals with an amber bar, like a painted sign on brick. Honest trade heritage.</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot">
+    <span><b>Next step:</b> one D + one T, and we deliver the final lockup in full color, solid navy and white, plus favicon and print files.</span>
+    <span>BitBrd · bitbrd.com</span>
+  </div>
+</div>
+
+</body>
+</html>
